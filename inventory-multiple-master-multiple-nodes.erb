@@ -20,19 +20,19 @@ openshift_deployment_type=origin
 
 # host group for masters
 [masters]
-master1.oc.marlo
-master2.oc.marlo
-master3.oc.marlo
+master01.oc.marlo
+master02.oc.marlo
+master03.oc.marlo
 
 # host group for etcd
 [etcd]
-master1.oc.marlo
+master01.oc.marlo
 
 # host group for nodes, includes region info
 [nodes]
-master1.oc.marlo
-master[2:3].oc.marlo openshift_schedulable=true
-node1.oc.marlo openshift_node_labels="{'region': 'primary', 'zone': 'east'}"
-node2.oc.marlo openshift_node_labels="{'region': 'primary', 'zone': 'west'}"
-infra-node1.oc.marlo openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
-infra-node2.oc.marlo openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+master01.oc.marlo
+master0[2:3].oc.marlo openshift_schedulable=true
+node01.oc.marlo openshift_node_labels="{'region': 'primary', 'zone': 'east'}"
+node02.oc.marlo openshift_node_labels="{'region': 'primary', 'zone': 'west'}"
+infra-node01.oc.marlo openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+infra-node02.oc.marlo openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
